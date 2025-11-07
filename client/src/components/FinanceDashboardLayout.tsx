@@ -39,9 +39,11 @@ export default function FinanceDashboardLayout({ children }: FinanceDashboardLay
   const navItems = [
     { label: "Dashboard", icon: Home, href: "/" },
     { label: "Contas", icon: CreditCard, href: "/accounts" },
+    { label: "Transações", icon: DollarSign, href: "/transactions" },
     { label: "Contas a Pagar", icon: DollarSign, href: "/payables" },
     { label: "Contas a Receber", icon: TrendingUp, href: "/receivables" },
     { label: "Fluxo de Caixa", icon: BarChart3, href: "/cash-flow" },
+    { label: "Análise", icon: BarChart3, href: "/analytics" },
     { label: "Relatórios", icon: FileText, href: "/reports" },
     { label: "Configurações", icon: Settings, href: "/settings" },
   ];

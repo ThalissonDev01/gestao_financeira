@@ -12,9 +12,11 @@
 - [x] Página de fluxo de caixa
 - [x] Página de controle de entrada/saída
 - [x] Sistema de relatórios automatizados
-- [ ] Visualizações gráficas (gráficos de fluxo, receitas, despesas)
+- [x] Visualizações gráficas (gráficos de fluxo, receitas, despesas)
 - [x] Autenticação e controle de acesso
 - [x] Responsividade e design UI
-- [ ] Testes e validação
-- [ ] Integração com gráficos (Chart.js ou Recharts)
-- [ ] Melhorias de UX e refinamento visual
+- [x] Testes e validação
+- [x] Integração com gráficos (Recharts)
+- [x] Página de transações com filtros avançados
+- [x] Página de análise com gráficos interativos
+- [x] Melhorias de UX e refinamento visual
