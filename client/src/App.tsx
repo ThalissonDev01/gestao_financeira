@@ -4,24 +4,33 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import FinanceDashboardLayout from "./components/FinanceDashboardLayout";
+import Dashboard from "./pages/Dashboard";
+import Accounts from "./pages/Accounts";
+import Payables from "./pages/Payables";
+import Receivables from "./pages/Receivables";
+import CashFlow from "./pages/CashFlow";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <FinanceDashboardLayout>
+      <Switch>
+        <Route path={"/"} component={Dashboard} />
+        <Route path={"/accounts"} component={Accounts} />
+        <Route path={"/payables"} component={Payables} />
+        <Route path={"/receivables"} component={Receivables} />
+        <Route path={"/cash-flow"} component={CashFlow} />
+        <Route path={"/reports"} component={Reports} />
+        <Route path={"/settings"} component={Settings} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </FinanceDashboardLayout>
   );
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
   return (
